@@ -1,0 +1,25 @@
+<div class="row">
+    <di class="col-xs-12">
+        <button class="btn btn-primary" ng-click="new()">Nuevo</button>
+        <button class="btn btn-primary" ng-click="edit()">Editar</button>
+        <button class="btn btn-primary" ng-click="delete()">Eliminar</button>
+    </di>
+</div><br>
+<div class="row">
+    <div class="col-xs-12">
+        <table border="1px" width="100%">
+            <tr>
+                <th width="10">#</th>
+                <th width="10"></th>
+                <th>Apellidos y Nombres</th>
+            </tr>
+            <tr ng-repeat="person in persons">
+                <td>{{$index + 1}}</td>
+                <td>
+                    <input type="checkbox" ng-model="person.checker" ng-click="toggleChecker(person)">
+                </td>
+                <td>{{person.firstName}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
